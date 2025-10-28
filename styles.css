@@ -8,7 +8,8 @@
 body {
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5;
+    background: linear-gradient(#e0f7fa, #ffffff);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +30,12 @@ header{
     width: 100%;
 }
 
+.inicio h1 {
+    font-size: 36px; 
+    font-weight: 700; 
+    margin: 0;
+    display: flex;
+}
 
 /* --- NAV --- */
 nav {
@@ -77,38 +84,36 @@ nav ul li a:hover {
 /* --- SECCIONES --- */
 #home {
   display: grid;
-  grid-template-columns: 1fr auto; /* texto flexible | imagen tamaño natural */
-  grid-template-rows: auto 1fr;    /* h1 en fila 1, p+img en fila 2 */
+  grid-template-columns: 1fr auto; 
+  grid-template-rows: auto 1fr;    
   gap: 0px;
   align-items: center;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 -20px;
+  
 }
 
-/* que el H1 ocupe ambas columnas (encima de p e img) */
 #home > h1 {
   grid-column: 1 / -1;
   margin: 0;
-  font-family: 42px; /* H1 */
+  font-family: 42px; 
 }
 
-/* párrafo en la primera columna (alineado con la imagen a la derecha) */
 #home > p {
   margin: 0;
-  line-height: 1.6;
   padding: 0;
   margin-left: 0;
   margin-right: 0;
 }
 
-/* imagen en la segunda columna */
 #home > img {
   display: block;
   width: 100%;
-  max-width: 400px; /* controla el tamaño en escritorio */
+  max-width: 400px; 
   height: auto;
   justify-self: end;
+  border-radius: 10px;
 }
 .section {
     flex: 0 0 65%;
@@ -157,7 +162,7 @@ ul.intro {
 }
 
 #instalaciones {
-    padding 0 20px;
+    padding: 0 20px;
     text-align: left;
 }
 /* --- GALERÍA --- */
@@ -176,14 +181,13 @@ ul.intro {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s; box-shadow: 0.3s;
+    transition: transform 0.3s, box-shadow: 0.3s;
     font-size: 20px;
 }
 
 .galeria .imagen img {
     width: 100%;
     height: auto;
-    
     transition: transform 0.3s;
 }
 
@@ -207,7 +211,6 @@ th, td {
     border: 1px solid #00BCD4;
     padding: 12px 20px;
     text-align: center;
-    
 }
 
 th {
@@ -252,7 +255,7 @@ footer .footer {
 }
 
 /* --- BOTONES --- */
-button, .btn {
+.btn {
     background-color: #CDDC39;
     color: #333;
     border: none;
@@ -264,7 +267,7 @@ button, .btn {
     font-family: 'Merriweather', serif;
 }
 
-button:hover, .btn:hover {
+.btn:hover {
     background-color: #b0c800;
 }
 
