@@ -10,7 +10,7 @@ body {
     color: #333;
     background: linear-gradient(#e0f7fa, #ffffff);
     background-image: url(/IMAGENES/tratamiento-fisio1.png);
-    background-size: 100%;
+    background-size: 100 cover;
     background-position: right;
     background-repeat: no-repeat;
     
@@ -85,7 +85,6 @@ nav ul li a:hover {
 /* --- SECCIONES --- */
 
 section h1 {
-    margin-bottom: 20px;
     color: #00BCD4;
     font-size: 42px; 
     font-weight: 700;
@@ -129,6 +128,7 @@ aside textarea {
     border-radius: 5px;
     box-sizing: border-box;
     margin-bottom: 15px;
+    resize: none;
     }
 
     /* --- FOOTER --- */
@@ -139,7 +139,7 @@ footer {
     gap: 1.5rem; 
     text-align: center;
     background-color:#00BCD4;
-    padding: 0px 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -158,9 +158,7 @@ footer .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 16px;
-    background-color:#00BCD4;
-    
+    font-size: 16px;    
 }
 
 /* --- BOTONES --- */
@@ -194,6 +192,71 @@ footer .footer {
 
 .btn1:hover {
     background-color: rgb(126, 201, 201);
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav ul {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+}
+
+/* Tablets / móviles grandes (768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .contact {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    aside input,
+    aside textarea {
+        font-size: 18px;
+    }
+
+    footer img {
+        height: 100px;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
 }
 
 
