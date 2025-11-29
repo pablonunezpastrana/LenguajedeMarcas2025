@@ -37,6 +37,13 @@
                 <input type="text" id="name" name="name" required><br><br>
                 <label for="email"><b>Correo electrónico:</b></label><br>
                 <input type="email" id="email" name="email" required><br><br>
+                <label for="tipo-consulta"><b>Tipo de consulta</b></label><br>
+                <select id="tipo-consulta" name="tipo-consulta" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="informacion">Solicitud de información</option>
+                    <option value="reserva">Reserva de cita</option>
+                    <option value="otra">Otra consulta</option>
+                </select><br>
                 <label for="message"><b>Mensaje:</b></label><br>
                 <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
                 <input type="submit" value="Enviar" class="btn1">
@@ -54,8 +61,21 @@
                 </p>
             </address>
             <p>Información legal | Aviso de privacidad | Redes sociales | Afiliaciones y certificaciones</p>
-            </div>
-        
-       </footer>     
+            </div> 
+       </footer>  
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(event) 
+    {
+        event.preventDefault();
+        alert("¡Tu mensaje ha sido enviado correctamente!");
+        form.reset();
+    });
+
+});
+</script>   
     </body>
 </html>
